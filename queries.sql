@@ -34,3 +34,10 @@ JOIN "Customer" as c
     ON o.CustomerId = c.Id
 JOIN "Employee" as e
     ON o.EmployeeId = e.Id;
+
+
+-- stretch:
+
+SELECT c.CategoryName, COUNT (*) as Count
+FROM "Category" as c, "Product"
+GROUP BY c.CategoryName
